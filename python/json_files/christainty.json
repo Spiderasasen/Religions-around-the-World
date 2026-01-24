@@ -1,9 +1,7 @@
 {
   "name": "Christianity",
   "description": "Christianity, major religion stemming from the life, teachings, and death of Jesus of Nazareth (the Christ, or the Anointed One of God) in the 1st century ce. It has become the largest of the world’s religions and, geographically, the most widely diffused of all faiths. It has a constituency of more than two billion believers.",
-  "regions": [
-
-  ],
+  "regions": "regions/christiaity_regions.json",
   "text":{
     "name": "Bible",
     "link": "https://www.bible.com/bible/111/JHN.1.NIV"
