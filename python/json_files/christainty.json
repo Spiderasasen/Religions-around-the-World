@@ -7,6 +7,23 @@
     "link": "https://www.bible.com/bible/111/JHN.1.NIV"
   },
   "branches": [
-
+    {
+      "name": "Catholicism",
+      "description": "the largest branch of Christianity, centered on the teachings of Jesus Christ, with over a billion followers worldwide, distinguished by its structure under the Pope, emphasis on sacraments like the Eucharist, veneration of Mary and saints, and belief in one God as the Trinity (Father, Son, Holy Spirit).",
+      "regions": "regions/branches/christan/catholic.json",
+      "text": {
+        "name": "Catholic Bible",
+        "link": "https://mycatholic.life/bible/"
+      }
+    },
+    {
+      "name": "Baptist",
+      "description": "a Protestant Christian who emphasizes the Bible, salvation by faith in Jesus, and the autonomy of local churches.",
+      "regions": "",
+      "text": {
+        "name": "",
+        "link": ""
+      }
+    }
   ]
 }
