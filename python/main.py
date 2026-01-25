@@ -99,6 +99,43 @@ def link_branches_to_regions(cursor, region_id, branch_id, religion_id):
     """
     cursor.execute(sql, (region_id, branch_id, religion_id))
 
+
+#main function to insert everything
+def main_insert(cursor, data):
+    # inserting the religion
+    religion_id = inserting_religion(cursor, data)
+
+    # inserting religion text
+    book_id = insert_text(cursor, data["text"])
+    link_religion_to_book(cursor, religion_id, book_id)
+
+    # inserting relion regions
+    print("Trying to open:", data["regions"])
+    with open(data["regions"], "r") as f:
+        regions = json.load(f)
+
+    for region in regions:
+        region_id = insert_region(cursor, region)
+        link_religion_to_region(cursor, religion_id, region_id)
+
+    # inserting the branches
+    for branch in data["branches"]:
+        branch_id = inserting_branches(cursor, branch, religion_id)
+
+        # inserting branch text
+        book_id = insert_text(cursor, branch["text"])
+        link_branches_to_books(cursor, branch_id, book_id, religion_id)
+
+        # inserting branch regions
+        with open(branch["regions"], "r") as f:
+            branch_regions = json.load(f)
+
+        for region in branch_regions:
+            region_id = insert_region(cursor, region)
+            link_branches_to_regions(cursor, region_id, branch_id, religion_id)
+
+        print(f"Religion:{religion_id}, Branch:{branch_id}; is done")
+
 #main functions
 def main():
     db = connection()
@@ -108,37 +145,7 @@ def main():
     #loading json
     data = load_religion("json_files/christainty.json")
 
-    #inserting the religion
-    religion_id = inserting_religion(cursor, data)
-
-    #inserting religion text
-    book_id = insert_text(cursor, data["text"])
-    link_religion_to_book(cursor, religion_id, book_id)
-
-    #inserting relion regions
-    print("Trying to open:", data["regions"])
-    with open(data["regions"], "r") as f:
-        regions = json.load(f)
-
-    for region in regions:
-        region_id = insert_region(cursor, region)
-        link_religion_to_region(cursor, religion_id, region_id)
-
-    #inserting the branches
-    for branch in data["branches"]:
-        branch_id = inserting_branches(cursor, branch, religion_id)
-
-        #inserting branch text
-        book_id = insert_text(cursor, branch["text"])
-        link_branches_to_books(cursor, branch_id, book_id, religion_id)
-
-        #inserting branch regions
-        with open(branch["regions"], "r") as f:
-            branch_regions = json.load(f)
-
-        for region in branch_regions:
-            region_id = insert_region(cursor, region)
-            link_branches_to_regions(cursor, region_id, branch_id, religion_id)
+    main_insert(cursor, data)
 
     print("Everything is added!!")
     db.commit()

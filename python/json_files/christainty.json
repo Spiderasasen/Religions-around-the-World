@@ -17,12 +17,21 @@
       }
     },
     {
-      "name": "Protestantism ",
-      "description": " a form of Christianity that emphasizes justification of sinners through faith alone, the teaching that salvation comes by unmerited divine grace, the priesthood of all believers, and the Bible as the sole infallible source of authority for Christian faith and practice.",
+      "name": "Protestantism",
+      "description": "a form of Christianity that emphasizes justification of sinners through faith alone, the teaching that salvation comes by unmerited divine grace, the priesthood of all believers, and the Bible as the sole infallible source of authority for Christian faith and practice.",
       "regions": "json_files/regions/branches/christan/protastant.json",
       "text": {
         "name": "Bible",
         "link": "https://www.bible.com/bible/111/JHN.1.NIV"
+      }
+    },
+    {
+      "name": "Orthodoxy",
+      "description": "the ancient, historic Church founded by Jesus Christ and His Apostles, characterized by its adherence to early apostolic tradition, liturgical worship, and the Nicene Creed.",
+      "regions": "json_files/regions/branches/christan/orthidox.json",
+      "text": {
+        "name": "Orthodox Bible",
+        "link": "https://dswasundayschool.org/study-bible.pdf"
       }
     }
   ]
