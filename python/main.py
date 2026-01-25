@@ -142,10 +142,18 @@ def main():
     cursor = db.cursor()
     print("Connected successfully!")
 
-    #loading json
-    data = load_religion("json_files/christainty.json")
+    #dictunary that will hold all the religons
+    religionDict = {
+        "Christianity": "json_files/christainty.json"
+    }
 
-    main_insert(cursor, data)
+    #looping through all the keys in the dict
+    for religion, path in religionDict.items():
+        #loading json
+        data = load_religion(path)
+
+        #inserting all the data
+        main_insert(cursor, data)
 
     print("Everything is added!!")
     db.commit()
