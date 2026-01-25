@@ -1,7 +1,7 @@
 {
   "name": "Christianity",
   "description": "Christianity, major religion stemming from the life, teachings, and death of Jesus of Nazareth (the Christ, or the Anointed One of God) in the 1st century ce. It has become the largest of the world’s religions and, geographically, the most widely diffused of all faiths. It has a constituency of more than two billion believers.",
-  "regions": "regions/christiaity_regions.json",
+  "regions": "json_files/regions/christiaity_regions.json",
   "text":{
     "name": "Bible",
     "link": "https://www.bible.com/bible/111/JHN.1.NIV"
@@ -10,7 +10,7 @@
     {
       "name": "Catholicism",
       "description": "the largest branch of Christianity, centered on the teachings of Jesus Christ, with over a billion followers worldwide, distinguished by its structure under the Pope, emphasis on sacraments like the Eucharist, veneration of Mary and saints, and belief in one God as the Trinity (Father, Son, Holy Spirit).",
-      "regions": "regions/branches/christan/catholic.json",
+      "regions": "json_files/regions/branches/christan/catholic.json",
       "text": {
         "name": "Catholic Bible",
         "link": "https://mycatholic.life/bible/"
@@ -19,7 +19,7 @@
     {
       "name": "Protestantism ",
       "description": " a form of Christianity that emphasizes justification of sinners through faith alone, the teaching that salvation comes by unmerited divine grace, the priesthood of all believers, and the Bible as the sole infallible source of authority for Christian faith and practice.",
-      "regions": "regions/branches/christan/protastant.json",
+      "regions": "json_files/regions/branches/christan/protastant.json",
       "text": {
         "name": "Bible",
         "link": "https://www.bible.com/bible/111/JHN.1.NIV"
