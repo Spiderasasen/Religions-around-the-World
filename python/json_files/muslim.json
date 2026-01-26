@@ -1,0 +1,14 @@
+{
+  "name": "Islam",
+  "description": "an Abrahamic monotheistic religion based on the Quran and the teachings of Muhammad. The religion's adherents, called Muslims, are estimated to number 2 billion worldwide and are the world's second-largest religious population, after Christians.",
+  "regions": "json_files/regions/islam.json",
+  "text": {
+    "name": "Quran",
+    "link": "https://www.clearquran.com/"
+  },
+  "branches": [
+    {
+
+    }
+  ]
+}
