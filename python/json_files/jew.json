@@ -1,0 +1,14 @@
+{
+  "name": "Judaism",
+  "description": "an ancient, monotheistic religion and way of life for the Jewish people, centered on a covenant with one God, revealed through the Torah (Hebrew Bible) and traditions, emphasizing ethical conduct, community, and holiness in daily life, making it a foundational faith for Christianity and Islam.",
+  "regions": "json_files/regions/Judaism.json",
+  "text": {
+    "name": "Torah",
+    "link": "https://www.sefaria.org/Genesis.1.1?lang=bi&with=all&lang2=en"
+  },
+  "branches": [
+    {
+
+    }
+  ]
+}
