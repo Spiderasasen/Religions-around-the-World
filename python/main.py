@@ -155,7 +155,8 @@ def main():
     #dictunary that will hold all the religons
     religionDict = {
         "Christianity": "json_files/christainty.json",
-        "Judaism": "json_files/jew.json"
+        "Judaism": "json_files/jew.json",
+        "Islam": "json_files/muslim.json"
     }
 
     #looping through all the keys in the dict
