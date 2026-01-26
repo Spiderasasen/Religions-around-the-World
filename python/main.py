@@ -45,6 +45,16 @@ def inserting_religion(cursor, data):
 
 #inserting a book
 def insert_text(cursor, text):
+    #checking if the text is there
+    sql_check = "select book_key from books where text_name = %s"
+    cursor.execute(sql_check, (text["name"],))
+    result = cursor.fetchone()
+
+    #if the name is there, return only the id
+    if result:
+        return result[0]
+
+    #only inserting if the text is not there
     sql = """
         INSERT INTO books (text_name, text_link)
         VALUES (%s, %s)
@@ -144,11 +154,13 @@ def main():
 
     #dictunary that will hold all the religons
     religionDict = {
-        "Christianity": "json_files/christainty.json"
+        "Christianity": "json_files/christainty.json",
+        "Judaism": "json_files/jew.json"
     }
 
     #looping through all the keys in the dict
     for religion, path in religionDict.items():
+        print("Working on:", religion)
         #loading json
         data = load_religion(path)
 

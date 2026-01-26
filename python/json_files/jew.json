@@ -19,7 +19,7 @@
     {
       "name": "Conservative Judaism",
       "description": "a Jewish religious movement that regards the authority of Jewish law and tradition as emanating primarily from the assent of the people through the generations, more than from divine revelation. It therefore views Jewish law, or Halakha, as both binding and subject to historical development.",
-      "region": "json_files/regions/branches/jew/Conservative.json",
+      "regions": "json_files/regions/branches/jew/Conservative.json",
       "text": {
         "name": "Torah",
         "link": "https://www.sefaria.org/Genesis.1.1?lang=bi&with=all&lang2=en"
@@ -28,7 +28,7 @@
     {
       "name": "Reform Judaism",
       "description": "a major Jewish denomination that emphasizes the evolving nature of Judaism, the superiority of its ethical aspects to its ceremonial ones, and belief in a continuous revelation which is closely intertwined with human reason and not limited to the theophany at Mount Sinai.",
-      "region": "json_files/regions/branches/jew/reform.json",
+      "regions": "json_files/regions/branches/jew/reform.json",
       "text": {
         "name": "Torah",
         "link": "https://www.sefaria.org/Genesis.1.1?lang=bi&with=all&lang2=en"
