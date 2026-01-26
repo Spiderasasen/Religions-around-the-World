@@ -8,7 +8,22 @@
   },
   "branches": [
     {
-
+      "name": "Sunni",
+      "description": "It holds that Muhammad did not appoint any successor and that his closest companion Abu Bakr rightfully succeeded him as the caliph of the Muslim community, being appointed at the meeting of Saqifa.",
+      "regions": "json_files/regions/branches/islam/Sunni.json",
+      "text": {
+        "name": "Quran",
+        "link": "https://www.clearquran.com/"
+      }
+    },
+    {
+      "name": "Shia",
+      "description": "It holds that Muhammad designated Ali ibn Abi Talib as both his political successor (caliph) and as the spiritual leader of the Muslim community (imam).",
+      "regions": "json_files/regions/branches/islam/Shia.json",
+      "text": {
+        "name": "Quran",
+        "link": "https://www.clearquran.com/"
+      }
     }
   ]
 }
