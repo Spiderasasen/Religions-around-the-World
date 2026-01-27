@@ -1,6 +1,6 @@
 {
   "name": "Islam",
-  "description": "an Abrahamic monotheistic religion based on the Quran and the teachings of Muhammad. The religion's adherents, called Muslims, are estimated to number 2 billion worldwide and are the world's second-largest religious population, after Christians.",
+  "description": "Islam is a monotheistic religion based on the revelations received by the Prophet Muhammad in the 7th century, which are recorded in the Quran, the holy book believed to be the literal word of God (Allah). The faith is built upon the Five Pillars, which include the declaration of faith (Shahada), daily prayer (Salah), charity (Zakat), fasting during Ramadan (Sawm), and the pilgrimage to Mecca (Hajj). Islam emphasizes the absolute oneness of God and the importance of living a life of submission to His will through ethical conduct and communal responsibility. Following the death of Muhammad, the community split over the question of leadership, leading to the development of several distinct branches that share these core beliefs but differ in their views on authority and spiritual practice.",
   "regions": "json_files/regions/islam.json",
   "text": {
     "name": "Quran",
@@ -9,7 +9,7 @@
   "branches": [
     {
       "name": "Sunni",
-      "description": "It holds that Muhammad did not appoint any successor and that his closest companion Abu Bakr rightfully succeeded him as the caliph of the Muslim community, being appointed at the meeting of Saqifa.",
+      "description": "Sunni Islam is the largest branch of the faith, making up about 85–90% of the global Muslim population. The name comes from the word Sunnah, referring to the traditions and practices of the Prophet Muhammad, which Sunnis strive to follow closely. This branch emerged from the belief that the leader of the Muslim community (the Caliph) should be chosen by consensus based on their capability and piety, rather than through a direct hereditary line from the Prophet. Sunni Islam emphasizes the authority of the Quran and the Hadith (recorded sayings and actions of Muhammad) as interpreted by legal scholars. It features a decentralized religious structure, where the relationship between the individual and God is direct, and communal life is guided by established schools of jurisprudence.",
       "regions": "json_files/regions/branches/islam/Sunni.json",
       "text": {
         "name": "Quran",
@@ -18,7 +18,7 @@
     },
     {
       "name": "Shia",
-      "description": "It holds that Muhammad designated Ali ibn Abi Talib as both his political successor (caliph) and as the spiritual leader of the Muslim community (imam).",
+      "description": "Shia Islam is the second-largest branch of Islam, representing about 10–15% of Muslims worldwide. The tradition originated from the belief that leadership of the community should have remained within the Prophet Muhammad’s direct family, specifically starting with his cousin and son-in-law, Ali ibn Abi Talib. Because of this, Shia Muslims place great spiritual importance on the Imams—divinely appointed leaders from the Prophet's bloodline who are believed to possess special spiritual and political authority. This history has fostered a culture that highly values the concepts of justice and sacrifice, most notably commemorated during the Day of Ashura. While Shias follow the same Five Pillars as Sunnis, they have a more centralized religious hierarchy and look to their top scholars (Ayatollahs) for guidance on modern legal and spiritual matters.",
       "regions": "json_files/regions/branches/islam/Shia.json",
       "text": {
         "name": "Quran",

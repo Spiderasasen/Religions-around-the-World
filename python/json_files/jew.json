@@ -1,6 +1,6 @@
 {
   "name": "Judaism",
-  "description": "an ancient, monotheistic religion and way of life for the Jewish people, centered on a covenant with one God, revealed through the Torah (Hebrew Bible) and traditions, emphasizing ethical conduct, community, and holiness in daily life, making it a foundational faith for Christianity and Islam.",
+  "description": "Judaism is one of the world’s oldest monotheistic religions, centered on a sacred Covenant (a mutual agreement) between God and the people. It emphasizes the importance of action, deeds, and the study of divine law over abstract creeds. The foundation of Jewish life is the Torah, which contains the laws and teachings revealed to the prophet Moses. Judaism teaches that life should be lived in accordance with Mitzvot (commandments) that govern ethical behavior and religious rituals. Unlike many other religions, Judaism is both a faith and an ethno-religious identity, focusing on the history and destiny of the Jewish people. The central goal is to live a holy life in this world and to participate in Tikkun Olam, the Jewish concept of \"repairing the world\" through social justice and acts of kindness.",
   "regions": "json_files/regions/Judaism.json",
   "text": {
     "name": "Torah",
@@ -9,7 +9,7 @@
   "branches": [
     {
       "name": "Orthodox Judaism",
-      "description": "advocates a strict observance of Jewish law, or halakha, which is to be interpreted and determined only according to traditional methods and in adherence to the continuum of received precedent through the ages.",
+      "description": "Orthodox Judaism is the branch of the faith that adheres most strictly to traditional Jewish law, known as Halakha. Its followers believe that the Torah (both written and oral) was divinely revealed by God at Mount Sinai and remains eternally binding and unchangeable, regardless of modern societal shifts. Because of this, Orthodox life is characterized by a high degree of discipline, including the strict observance of the Sabbath (Shabbat), the keeping of Kosher dietary laws, and daily prayer in Hebrew. While there is diversity within the movement—ranging from Modern Orthodox (who engage fully with the secular world) to Haredi (who often live in more insulated communities)—all Orthodox Jews share a commitment to preserving the ancient rituals, gender roles, and legal frameworks that have defined Jewish life for millennia.",
       "regions": "json_files/regions/branches/jew/Orthodox.json",
       "text": {
         "name": "Torah",
@@ -18,7 +18,7 @@
     },
     {
       "name": "Conservative Judaism",
-      "description": "a Jewish religious movement that regards the authority of Jewish law and tradition as emanating primarily from the assent of the people through the generations, more than from divine revelation. It therefore views Jewish law, or Halakha, as both binding and subject to historical development.",
+      "description": "Conservative Judaism acts as a \"middle way\" between the strict traditionalism of Orthodoxy and the modernizing changes of the Reform movement. It is based on the idea that Jewish law (Halakha) is still binding and essential, but it also acknowledges that the law has always evolved throughout history to reflect the needs of the community. In a Conservative synagogue, you will often see a blend of traditional practices—such as the use of Hebrew in services and the wearing of headcoverings—alongside modern shifts, like the full participation of women in all aspects of the service. The core philosophy is \"Tradition and Change,\" meaning that while the community remains deeply rooted in ancient customs, it uses modern scholarship to determine how those customs should be applied in the present day.",
       "regions": "json_files/regions/branches/jew/Conservative.json",
       "text": {
         "name": "Torah",
@@ -27,7 +27,7 @@
     },
     {
       "name": "Reform Judaism",
-      "description": "a major Jewish denomination that emphasizes the evolving nature of Judaism, the superiority of its ethical aspects to its ceremonial ones, and belief in a continuous revelation which is closely intertwined with human reason and not limited to the theophany at Mount Sinai.",
+      "description": "Reform Judaism is the most liberal of the major Jewish branches, emphasizing that the religion's ethical foundations are more important than its ritual laws. It views the Torah as a living, evolving document that was inspired by God but written by human beings, meaning its commandments can be adapted or even set aside to fit modern circumstances. Reform Jews prioritize the concept of Tikkun Olam (repairing the world) through social justice and personal autonomy, allowing individuals to decide which traditions—like keeping Kosher or wearing a kippah—are personally meaningful to them. This branch was the first to introduce gender-neutral services, ordain women as rabbis, and welcome interfaith families, focusing on making Judaism accessible and relevant in a contemporary, secular world.",
       "regions": "json_files/regions/branches/jew/reform.json",
       "text": {
         "name": "Torah",

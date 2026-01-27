@@ -1,6 +1,6 @@
 {
   "name": "Christianity",
-  "description": "Christianity, major religion stemming from the life, teachings, and death of Jesus of Nazareth (the Christ, or the Anointed One of God) in the 1st century ce. It has become the largest of the world’s religions and, geographically, the most widely diffused of all faiths. It has a constituency of more than two billion believers.",
+  "description": "Christianity is the world’s largest religion, centered on the life, teachings, death, and resurrection of Jesus Christ. At its core is the belief in one God as a Trinity: the Father, the Son (Jesus), and the Holy Spirit. Christians believe that through Jesus’s sacrifice, humanity is offered salvation and the forgiveness of sins, leading to eternal life. The primary sacred text is the Bible, consisting of the Old Testament (shared with Judaism) and the New Testament (focused on Jesus and the early Church). Over the centuries, it has developed into three main branches—Catholicism, Protestantism, and Eastern Orthodoxy—which, while sharing these core foundations, differ in their views on church authority, rituals, and the interpretation of scripture.",
   "regions": "json_files/regions/christiaity_regions.json",
   "text":{
     "name": "Bible",
@@ -9,7 +9,7 @@
   "branches": [
     {
       "name": "Catholicism",
-      "description": "the largest branch of Christianity, centered on the teachings of Jesus Christ, with over a billion followers worldwide, distinguished by its structure under the Pope, emphasis on sacraments like the Eucharist, veneration of Mary and saints, and belief in one God as the Trinity (Father, Son, Holy Spirit).",
+      "description": "Catholicism is the largest branch of Christianity, led by the Pope (the Bishop of Rome) and centered on the belief that the Church is the visible body of Christ on earth. It places equal importance on both the Bible and Sacred Tradition, which includes the teachings and laws passed down through church leaders over two thousand years. A defining feature of Catholic life is the Seven Sacraments, particularly the Eucharist (Communion), which Catholics believe becomes the literal body and blood of Jesus during the Mass. The tradition is known for its highly organized structure, its reverence for the Virgin Mary and the Saints, and its emphasis on both faith and \"good works\" as necessary parts of a spiritual life.",
       "regions": "json_files/regions/branches/christan/catholic.json",
       "text": {
         "name": "Catholic Bible",
@@ -18,7 +18,7 @@
     },
     {
       "name": "Protestantism",
-      "description": "a form of Christianity that emphasizes justification of sinners through faith alone, the teaching that salvation comes by unmerited divine grace, the priesthood of all believers, and the Bible as the sole infallible source of authority for Christian faith and practice.",
+      "description": "Protestantism emerged in the 16th century during the Reformation as a movement to reform the Christian Church, eventually breaking away from Roman Catholicism. Its defining principle is Sola Scriptura, the belief that the Bible is the sole supreme authority for faith and practice, rather than church tradition or the Pope. Protestants emphasize that salvation is a free gift from God received through faith alone, rather than through performing religious rituals or \"good works.\" Because it values the \"priesthood of all believers,\" the tradition is highly diverse, consisting of thousands of denominations—such as Baptists, Methodists, and Lutherans—that vary in their worship styles, but generally share a focus on preaching, personal study of scripture, and a simplified approach to church structure.",
       "regions": "json_files/regions/branches/christan/protastant.json",
       "text": {
         "name": "Bible",
@@ -27,7 +27,7 @@
     },
     {
       "name": "Orthodox Christianity",
-      "description": "the ancient, historic Church founded by Jesus Christ and His Apostles, characterized by its adherence to early apostolic tradition, liturgical worship, and the Nicene Creed.",
+      "description": "Orthodox Christianity\n\nEastern Orthodoxy is one of the oldest branches of Christianity, considering itself the original \"orthodox\" (right-believing) church established by the apostles. It is organized as a family of self-governing national churches—such as the Greek or Russian Orthodox Churches—rather than being led by a single figure like a Pope. The tradition is deeply mystical and centers on the Liturgy, where worship is seen as a way for heaven and earth to meet. A key feature of Orthodoxy is the use of icons (sacred paintings of saints and Christ), which are viewed as \"windows into heaven\" rather than just art. Philosophically, the focus is on Theosis, the process of becoming more like God through a life of prayer, fasting, and participation in the sacraments.",
       "regions": "json_files/regions/branches/christan/orthidox.json",
       "text": {
         "name": "Orthodox Bible",
