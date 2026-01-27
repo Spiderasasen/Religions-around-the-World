@@ -1,10 +1,7 @@
 {
   "name": "Hinduism",
   "description": "Hinduism is one of the world’s oldest religions, often described as a diverse \"way of life\" rather than a single rigid belief system. At its core is the belief in Brahman, the ultimate universal reality, and the Atman, or individual soul, which undergoes a cycle of birth, death, and rebirth known as Samsara. This journey is governed by Karma, the law of cause and effect where one’s actions determine future circumstances. The ultimate spiritual goal is Moksha, or liberation from this cycle to achieve union with the divine. To reach this, Hindus follow Dharma (righteous duty) and may find inspiration in sacred texts like the Vedas, the Upanishads, or the Bhagavad Gita. While the religion recognizes millions of deities—including the \"Trimurti\" of Brahma (creator), Vishnu (preserver), and Shiva (transformer)—most practitioners view these as different facets of the same underlying truth.",
-  "regions": [
-    "India",
-    "Nepal"
-  ],
+  "regions": "json_files/regions/hindu.json",
   "text": [
     {
       "name": "Vedas",
@@ -23,10 +20,7 @@
     {
       "name": "Vaishnavism",
       "description": "Vaishnavism is one of the major traditions within Hinduism, centered on the devotion to Lord Vishnu and his various incarnations (avatars). Followers, known as Vaishnavas, view Vishnu as the Supreme Reality (Brahman) who actively intervenes in the world to maintain cosmic order and protect the righteous. The tradition emphasizes Bhakti, or loving devotion, as the primary path to spiritual liberation. Central to this faith are the ten avatars of Vishnu—most notably Rama and Krishna—whose lives and teachings in the Ramayana and Bhagavad Gita provide the moral and spiritual foundation for practitioners. Vaishnavas often express their faith through temple worship, the chanting of holy names (kirtan), and a strong emphasis on ahimsa (non-violence) and vegetarianism.",
-      "regions": [
-        "India",
-        "Nepal"
-      ],
+      "regions": "json_files/regions/hindu.json",
       "text": [
         {
           "name": "Bhagavata Purana",
@@ -41,10 +35,7 @@
     {
       "name": "Shaivism",
       "description": "Shaivism is one of the oldest and most influential traditions within Hinduism, centered on the worship of Lord Shiva as the Supreme Being. Unlike traditions that focus on a personal savior, Shaivism often emphasizes the path of asceticism, yoga, and meditation to realize the inner self. Shiva is revered as a complex deity who embodies contradictions: he is the peaceful meditator, the fierce destroyer of ego and ignorance, and the Nataraja, whose cosmic dance creates and dissolves the universe. Practitioners, called Shaivites, frequently worship Shiva through the Linga, an abstract symbol representing his formless and infinite nature. The tradition places a heavy emphasis on the identity of the individual soul with the divine, teaching that by shedding worldly attachments and illusions, one can achieve liberation and recognize their own inherent divinity.",
-      "regions": [
-        "India",
-        "Nepal"
-      ],
+      "regions": "json_files/regions/hindu.json",
       "text": [
         {
           "name": "Shiva Purana",
@@ -59,10 +50,7 @@
     {
       "name": "Shaktism",
       "description": "Shaktism is the major Hindu tradition that worships the Divine Mother, known as Shakti or Devi, as the supreme, absolute power of the universe. Unlike other branches that may view the feminine as a consort to a male deity, Shaktis believe that the feminine principle is the ultimate creative force and the energy that moves the entire cosmos. This tradition encompasses a wide range of forms of the Goddess, from the gentle and nurturing Laxmi or Parvati to the fierce and powerful Durga or Kali, who destroys evil to restore balance. Practice in Shaktism often involves Tantra, complex rituals, and deep meditation aimed at awakening the divine energy within the human body. Ultimately, followers see the Goddess as the source of both material abundance and spiritual liberation, recognizing the divine feminine as the active power through which the formless reality becomes manifest.",
-      "regions": [
-        "India",
-        "Nepal"
-      ],
+      "regions": "json_files/regions/hindu.json",
       "text": [
         {
           "name": "Devi Bhagavata Purana",
@@ -77,10 +65,7 @@
     {
       "name": "Smartism",
       "description": "Smartism is a liberal and meditative tradition within Hinduism that emphasizes the essential oneness of all deities, following the philosophical teachings of the sage Adi Shankara. Unlike the other major branches that elevate one specific god as supreme, Smartas practice the Panchayatana puja, which involves the simultaneous worship of five (or six) deities: Vishnu, Shiva, Shakti, Surya, and Ganesha (and sometimes Kartikeya). This practice is rooted in the belief that these are all equivalent manifestations of the one formless, infinite reality known as Brahman. Smartism focuses heavily on the Advaita Vedanta philosophy, teaching that the ultimate goal of life is to look past the \"illusion\" of the material world to realize that the individual soul and the universal absolute are, in fact, identical.",
-      "regions": [
-        "India",
-        "Nepal"
-      ],
+      "regions": "json_files/regions/hindu.json",
       "text": [
         {
           "name": "Upanishads",
