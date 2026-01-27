@@ -116,8 +116,14 @@ def main_insert(cursor, data):
     religion_id = inserting_religion(cursor, data)
 
     # inserting religion text
-    book_id = insert_text(cursor, data["text"])
-    link_religion_to_book(cursor, religion_id, book_id)
+    texts = data["text"]
+
+    if isinstance(texts, dict):
+        texts = [texts]
+
+    for text in texts:
+        book_id = insert_text(cursor, text)
+        link_religion_to_book(cursor, religion_id, book_id)
 
     # inserting relion regions
     print("Trying to open:", data["regions"])
@@ -133,8 +139,14 @@ def main_insert(cursor, data):
         branch_id = inserting_branches(cursor, branch, religion_id)
 
         # inserting branch text
-        book_id = insert_text(cursor, branch["text"])
-        link_branches_to_books(cursor, branch_id, book_id, religion_id)
+        branch_text = branch["text"]
+
+        if isinstance(branch_text, dict):
+            branch_text = [branch_text]
+
+        for text in branch_text:
+            book_id = insert_text(cursor, text)
+            link_branches_to_books(cursor, branch_id, book_id, religion_id)
 
         # inserting branch regions
         with open(branch["regions"], "r") as f:
@@ -156,7 +168,8 @@ def main():
     religionDict = {
         "Christianity": "json_files/christainty.json",
         "Judaism": "json_files/jew.json",
-        "Islam": "json_files/muslim.json"
+        "Islam": "json_files/muslim.json",
+        "Hinduism": "json_files/hindu.json"
     }
 
     #looping through all the keys in the dict
