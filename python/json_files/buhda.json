@@ -1,11 +1,48 @@
 {
   "name": "Buddhism",
-  "description": "",
-  "regions": "",
-  "text": "",
+  "description": "Buddhism is a spiritual tradition that originated in India over 2,500 years ago, founded by Siddhartha Gautama, known as the Buddha (the Enlightened One). Unlike many other religions, it is non-theistic, focusing not on a creator god but on ending human suffering. The core teachings are found in the Four Noble Truths, which explain that suffering is caused by attachment and desire, and the Eightfold Path, a practical guide for ethical living and mental discipline. The ultimate goal is to achieve Nirvana, a state of liberation from the cycle of rebirth (Samsara). Over time, Buddhism spread across Asia, evolving into three distinct \"vehicles\" based on different interpretations of the path to enlightenment.",
+  "regions": "json_files/regions/budda.json",
+  "text": [
+    {
+      "name": "Tripitaka",
+      "link": "https://www.sariputta.com/tipitaka/english"
+    },
+    {
+      "name": "Mahayana Sutras",
+      "link": "https://cttbusa.org/sutratexts.asp.html"
+    },
+    {
+      "name": "Tibetan Canon",
+      "link": "https://84000.co/all-publications"
+    }
+  ],
   "branches": [
     {
-
+      "name": "Theravada",
+      "description": "The \"School of the Elders.\" It is the oldest form, most common in Southeast Asia (Sri Lanka, Thailand). It focuses on strict personal meditation and the monastic life to achieve individual enlightenment.",
+      "regions": "json_files/regions/branches/buddha/theravada.json",
+      "text": {
+        "name": "Tripitaka",
+        "link": "https://www.sariputta.com/tipitaka/english"
+      }
+    },
+    {
+      "name": "Mahayana",
+      "description": "The \"Great Vehicle.\" Found mostly in East Asia (China, Japan, Korea), it teaches that anyone can achieve enlightenment. It emphasizes the Bodhisattva—a person who delays their own Nirvana to stay behind and help all other beings get there first.",
+      "regions": "json_files/regions/branches/buddha/mahayana.json",
+      "text": {
+        "name": "Mahayana Sutras",
+        "link": "https://cttbusa.org/sutratexts.asp.html"
+      }
+    },
+    {
+      "name": "Vajrayana",
+      "description": "The \"Diamond Vehicle.\" Primarily associated with Tibetan Buddhism, it uses more \"turbo-charged\" techniques like mantras, mudras (hand gestures), and complex visualizations to speed up the journey to enlightenment.",
+      "regions": "json_files/regions/branches/buddha/vajrayana.json",
+      "text": {
+        "name": "Tibetan Canon",
+        "link": "https://84000.co/all-publications"
+      }
     }
   ]
 }
