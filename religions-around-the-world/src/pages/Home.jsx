@@ -1,7 +1,25 @@
 import {Link} from 'react-router-dom'
-import religions from "../data/religions.json"
+import {useEffect, useState} from 'react'
 
 function Home(){
+    const [religions, setReligions] = useState([])
+    const [loading, setLoading] = useState(true)
+
+    useEffect(()=>{
+        fetch('http://localhost:8000/religions')
+            .then(res=>res.json())
+            .then(data => {
+                setReligions(data)
+                setLoading(false)
+            })
+            .catch((err) =>{
+                console.log('error trying to fetch religions', err)
+                setLoading(false)
+            })
+    }, [])
+
+    if(loading){return <p>Loading...</p>}
+
     // a list of religions will be placed, here. making the transition to religion page more simple
     return(
         <div>
