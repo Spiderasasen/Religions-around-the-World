@@ -77,10 +77,12 @@ def get_religion_regions(religions_key: int):
     cursor = conn.cursor(dictionary=True)
 
     cursor.execute("""
-                   SELECT region_name
-                   FROM religion_regions
-                   WHERE religions_key = %s
+                   SELECT r.region_name
+                   FROM regions_has_religions rr
+                            JOIN regions r ON rr.regions_regions_key = r.regions_key
+                   WHERE rr.religions_religions_key = %s
                    """, (religions_key,))
+
 
     rows = cursor.fetchall()
     cursor.close()
@@ -88,7 +90,13 @@ def get_religion_regions(religions_key: int):
 
     iso_list = []
     for row in rows:
-        name = row["region_name"]
+        try:
+            name = row["region_name"]
+            print("REGION NAME FROM DB:", repr(name))
+        except Exception as e:
+            print("ERROR READING NAME:", e)
+            continue
+
         iso = COUNTRY_TO_ISO3.get(name)
         if iso:
             iso_list.append(iso)

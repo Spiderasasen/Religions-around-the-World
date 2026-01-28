@@ -29,7 +29,10 @@ function ReligionPage(){
     useEffect(() => {
         fetch(`http://localhost:8000/religions/${id}/regions`)
             .then(res => res.json())
-            .then(data => setRegions(data))
+            .then(data => {
+                console.log("Regions from backend:", data);
+                setRegions(data);
+            })
             .catch(err => console.log("Error fetching regions:", err));
     }, [id]);
 
@@ -41,7 +44,7 @@ function ReligionPage(){
     return(
         <div>
             <h1>Religion: {religion.religion_name}</h1>
-            <h3>{religion.religion_description}</h3>
+            <p>{religion.religion_description}</p>
             <ReligionMap highlightedCountries={regions} />
         </div>
     );

@@ -12,19 +12,36 @@ function ReligionMap({ highlightedCountries }) {
     }, []);
 
     const styleCallback = (feature) => {
-        const iso3 = feature.properties.ISO_A3;
-        const isHighlighted = highlightedCountries.includes(iso3);
+        const iso3 =
+            feature.properties.ISO_A3?.toUpperCase() ||
+            feature.properties.iso_a3?.toUpperCase() ||
+            feature.properties.ADM0_A3?.toUpperCase() ||
+            feature.properties.adm0_a3?.toUpperCase();
+
+        const isHighlighted = highlightedCountries
+            .map(c => c.toUpperCase())
+            .includes(iso3);
 
         return {
-            fill: isHighlighted ? "#ffcc00" : "#d6d6d6",
+            fill: isHighlighted ? "#23c417" : "#d6d6d6",
             stroke: "#333",
             strokeWidth: 1,
         };
     };
 
+    console.log("highlightedCountries:", highlightedCountries);
     return (
         <div style={{ height: "500px", width: "100%", marginTop: "20px" }}>
-            <Map height={500} defaultCenter={[20, 0]} defaultZoom={2}>
+            <Map
+                height={500}
+                 defaultCenter={[20, 0]}
+                 defaultZoom={2}
+                 mouseEvents={false}
+                 touchEvents={false}
+                 zoomSnap={false}
+                 zoomAnimation={false}
+                 animate={false}
+            >
                 {geoData && (
                     <GeoJson data={geoData} styleCallback={styleCallback} />
                 )}
