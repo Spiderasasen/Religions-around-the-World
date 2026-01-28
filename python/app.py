@@ -52,3 +52,17 @@ def get_religions():
     cursor.close()
     conn.close()
     return data
+
+@app.get("/religions/{religion_id}")
+def get_religion(religion_id: int):
+    conn = get_connection()
+    if conn is None:
+        return {"error": "Failed to connect to database"}
+
+    cursor = conn.cursor(dictionary=True)
+    cursor.execute("select * from religions where religions_key = %s", (religion_id))
+    data = cursor.fetchone()
+    cursor.close()
+    conn.close()
+
+    return data
