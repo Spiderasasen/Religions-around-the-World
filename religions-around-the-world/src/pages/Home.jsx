@@ -28,8 +28,8 @@ function Home(){
             <ul>
                 {
                     religions.map((rel) =>(
-                        <li key={rel.id}>
-                            <Link to={`/religions/${rel.id}`}>{rel.name}</Link>
+                        <li key={rel.religions_ley}>
+                            <Link to={`/religions/${rel.religions_key}`}>{rel.religion_name}</Link>
                         </li>
                     ))
                 }
