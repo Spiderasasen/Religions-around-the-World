@@ -10,7 +10,7 @@ function App() {
           <Routes>
               <Route path="/" element={<Home />} />
               {/*Dynamic route*/}
-              <Route path="/religions/:religionId" element={<ReligionPage />} />
+              <Route path="/religions/:id" element={<ReligionPage />} />
               {/*Dynamic Branch*/}
               <Route path="/religions/:religionId/:branchId" element={<BranchPage />} />
           </Routes>

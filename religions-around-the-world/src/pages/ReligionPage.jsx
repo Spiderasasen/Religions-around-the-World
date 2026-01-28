@@ -1,5 +1,6 @@
 import {useParams} from "react-router-dom";
 
+
 function ReligionPage(){
     const religionId = useParams();
 
