@@ -169,7 +169,8 @@ def main():
         "Christianity": "json_files/christainty.json",
         "Judaism": "json_files/jew.json",
         "Islam": "json_files/muslim.json",
-        "Hinduism": "json_files/hindu.json"
+        "Hinduism": "json_files/hindu.json",
+        "Buddhism": "json_files/buhda.json"
     }
 
     #looping through all the keys in the dict
