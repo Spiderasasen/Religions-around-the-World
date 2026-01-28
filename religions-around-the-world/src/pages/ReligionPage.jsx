@@ -1,5 +1,6 @@
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
+import ReligionMap from "../componets/ReligionMap.jsx";
 
 function ReligionPage(){
     const { id} = useParams();
@@ -23,6 +24,15 @@ function ReligionPage(){
             });
     }, [id]);
 
+    const [regions, setRegions] = useState([]);
+
+    useEffect(() => {
+        fetch(`http://localhost:8000/religions/${id}/regions`)
+            .then(res => res.json())
+            .then(data => setRegions(data))
+            .catch(err => console.log("Error fetching regions:", err));
+    }, [id]);
+
     //loading
     if(loading){return(<p>Loading...</p>)}
     //checking if the religion is not there
@@ -32,6 +42,7 @@ function ReligionPage(){
         <div>
             <h1>Religion: {religion.religion_name}</h1>
             <h3>{religion.religion_description}</h3>
+            <ReligionMap highlightedCountries={regions} />
         </div>
     );
 }
