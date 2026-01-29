@@ -6,6 +6,7 @@ function ReligionPage(){
     const { id} = useParams();
     const [religion, setReligion] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [books, setBooks] = useState([]);
 
     //fetches the code from the api and loads it
     useEffect(() => {
@@ -36,6 +37,17 @@ function ReligionPage(){
             .catch(err => console.log("Error fetching regions:", err));
     }, [id]);
 
+    //fetching the books
+    useEffect(() => {
+        fetch(`http://localhost:8000/religions/${id}/books`)
+            .then(res => res.json())
+            .then(data => {
+                console.log("Books from backend:", data);
+                setBooks(data);
+            })
+            .catch(err => console.log("Error fetching books:", err));
+    }, [id]);
+
     //loading
     if(loading){return(<p>Loading...</p>)}
     //checking if the religion is not there
@@ -43,9 +55,31 @@ function ReligionPage(){
 
     return(
         <div>
-            <h1>Religion: {religion.religion_name}</h1>
-            <p>{religion.religion_description}</p>
-            <ReligionMap highlightedCountries={regions} />
+            {/*for the title and description*/}
+            <div>
+                <h1>Religion: {religion.religion_name}</h1>
+                <p>{religion.religion_description}</p>
+            </div>
+            {/*for the map*/}
+            <div>
+                <ReligionMap highlightedCountries={regions} />
+                <p><em>Map with a majority of people practicing {religion.religion_name}</em></p>
+            </div>
+            {/*for the text involved in the religion*/}
+            <div>
+                <p>Text used in {religion.religion_name}</p>
+                <ul>
+                    {
+                        books.map((text) =>{
+                            return(
+                                <li key={text.text_name}>
+                                    <p>{text.text_name}</p>
+                                </li>
+                                );
+                        })
+                    }
+                </ul>
+            </div>
         </div>
     );
 }

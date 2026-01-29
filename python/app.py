@@ -102,3 +102,21 @@ def get_religion_regions(religions_key: int):
             iso_list.append(iso)
 
     return iso_list
+
+@app.get("/religions/{religions_key}/books")
+def get_religion_books(religions_key: int):
+    conn = get_connection()
+    cursor = conn.cursor(dictionary=True)
+
+    cursor.execute("""
+        select b.text_name
+        from text_has_religions tr
+            join books b on tr.text_text_key = b.book_key
+        where tr.religions_religions_key = %s
+    """, (religions_key,))
+
+    rows = cursor.fetchall()
+    cursor.close()
+    conn.close()
+
+    return rows
