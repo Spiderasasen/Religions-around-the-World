@@ -138,3 +138,22 @@ def get_religion_branch(religions_key: int):
     conn.close()
 
     return branch
+
+#branch section of the code
+@app.get("/religions/{religions_key}/branch/{branch_key}")
+def get_single_branch(religions_key: int, branch_key: int):
+    conn = get_connection()
+    cursor = conn.cursor(dictionary=True)
+
+    cursor.execute("""
+                   SELECT *
+                   FROM branch
+                   WHERE religions_religions_key = %s
+                     AND branch_key = %s
+                   """, (religions_key, branch_key))
+
+    branch = cursor.fetchone()
+    cursor.close()
+    conn.close()
+
+    return branch
