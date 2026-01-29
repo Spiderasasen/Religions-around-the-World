@@ -157,3 +157,35 @@ def get_single_branch(religions_key: int, branch_key: int):
     conn.close()
 
     return branch
+
+#getting the branches regions
+@app.get("/religions/{religions_key}/branch/{branch_key}/regions")
+def getting_branch_region(religions_key: id, branch_key: id):
+    conn = get_connection()
+    cursor = conn.cursor(dictionary=True)
+
+    cursor.execute("""
+        select r.region_name
+        from regions_has_branch rb
+            join regions r on rb.regions_regions_key = r.regions_key
+        where rb.branch_religions_religions_key = %s and rb.branch_branch_key = %s
+    """, (religions_key, branch_key))
+
+    rows = cursor.fetchall()
+    cursor.close()
+    conn.close()
+
+    iso_list = []
+    for row in rows:
+        try:
+            name = row["region_name"]
+            print("REGION NAME FROM DB:", repr(name))
+        except Exception as e:
+            print("ERROR READING NAME:", e)
+            continue
+
+        iso = COUNTRY_TO_ISO3.get(name)
+        if iso:
+            iso_list.append(iso)
+
+    return iso_list
