@@ -120,3 +120,21 @@ def get_religion_books(religions_key: int):
     conn.close()
 
     return rows
+
+@app.get("/religions/{religions_key}/branch")
+def get_religion_branch(religions_key: int):
+    conn = get_connection()
+    cursor = conn.cursor(dictionary=True)
+
+    cursor.execute("""
+                   SELECT *
+                   FROM branch b
+                   WHERE b.religions_religions_key = %s
+                   """, (religions_key,))
+
+
+    branch = cursor.fetchall()
+    cursor.close()
+    conn.close()
+
+    return branch

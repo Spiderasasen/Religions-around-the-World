@@ -1,4 +1,4 @@
-import {useParams} from "react-router-dom";
+import {useParams, Link} from "react-router-dom";
 import {useEffect, useState} from "react";
 import ReligionMap from "../componets/ReligionMap.jsx";
 
@@ -7,6 +7,7 @@ function ReligionPage(){
     const [religion, setReligion] = useState(null);
     const [loading, setLoading] = useState(true);
     const [books, setBooks] = useState([]);
+    const [branch, setBranch] = useState([]);
 
     //fetches the code from the api and loads it
     useEffect(() => {
@@ -48,6 +49,17 @@ function ReligionPage(){
             .catch(err => console.log("Error fetching books:", err));
     }, [id]);
 
+    //fetching the branches
+    useEffect(() => {
+        fetch(`http://localhost:8000/religions/${id}/branch`)
+            .then(res => res.json())
+            .then(data => {
+                console.log("Branch from backend:", data);
+                setBranch(data);
+            })
+            .catch(err => console.log("Error fetching branch:", err));
+    }, [id]);
+
     //loading
     if(loading){return(<p>Loading...</p>)}
     //checking if the religion is not there
@@ -79,6 +91,20 @@ function ReligionPage(){
                         })
                     }
                 </ul>
+            </div>
+            {/*for the branches*/}
+            <div>
+                <p>Major branches of {religion.religion_name}</p>
+                <ul>
+                    {branch.map((b) => (
+                        <li key={b.branch_key}>
+                            <Link to={`/religions/${b.religions_religions_key}/${b.branch_key}`}>
+                                {b.branch_name}
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+
             </div>
         </div>
     );
