@@ -39,8 +39,13 @@ function BranchPage(){
 
     return(
         <div>
-            <h1>Religion: {religion.religion_name}</h1>
-            <h2>Branch: {branch.branch_name}</h2>
+            {/*for the intro*/}
+            <div>
+                <h1>Religion: {religion.religion_name}</h1>
+                <h2>Branch: {branch.branch_name}</h2>
+                <p>{branch.branch_description}</p>
+            </div>
+            {/*for the map*/}
         </div>
     );
 }
