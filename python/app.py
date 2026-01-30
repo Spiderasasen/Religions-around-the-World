@@ -189,3 +189,22 @@ def getting_branch_region(religions_key: int, branch_key: int):
             iso_list.append(iso)
 
     return iso_list
+
+@app.get("/religions/{religions_key}/branch/{branch_key}/books")
+def getting_books_from_branch(religions_key: int, branch_key: int):
+    conn = get_connection()
+    cursor = conn.cursor(dictionary=True)
+
+    cursor.execute("""
+                   SELECT b.text_name
+                   FROM text_has_branch tb
+                            JOIN books b ON tb.text_text_key = b.book_key
+                   WHERE tb.branch_religions_religions_key = %s
+                     AND tb.branch_branch_key = %s
+                   """, (religions_key, branch_key))
+
+    books = cursor.fetchall()
+    cursor.close()
+    conn.close()
+
+    return books

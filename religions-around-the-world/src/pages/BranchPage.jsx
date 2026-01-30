@@ -7,6 +7,7 @@ function BranchPage(){
     const [loading, setLoading] = useState(true);
     const [religion, setReligion] = useState(null);
     const [branch, setBranch] = useState(null);
+    const [books, setBooks] = useState([]);
 
     //fetches the code from the api and loads it
     useEffect(() => {
@@ -18,7 +19,7 @@ function BranchPage(){
                 setReligion(data);
                 setLoading(false);
             })
-            //if an error occors it will return nothing and will let us know that something mess up
+            //if an error occurs it will return nothing and will let us know that something mess up
             .catch(err => {
                 console.log("Error fetching religion:", err);
                 setLoading(false);
@@ -44,6 +45,17 @@ function BranchPage(){
             .catch(err => console.log("Error fetching branches regions:", err));
     }, [religionId, branchId]);
 
+    //fetching the books
+    useEffect(() => {
+        fetch(`http://localhost:8000/religions/${religionId}/branch/${branchId}/books`)
+            .then(res => res.json())
+            .then(data => {
+                console.log("Books from backend:", data);
+                setBooks(data);
+            })
+            .catch(err => console.log("Error fetching books:", err));
+    }, [religionId, branchId]);
+
     //loading
     if (loading || !branch || !religion) {
         return <p>Loading...</p>;
@@ -61,6 +73,23 @@ function BranchPage(){
             <div>
                 <ReligionMap highlightedCountries={regions} />
                 <p><em>Countries that practice {branch.branch_name} in the majority</em></p>
+            </div>
+            {/*for the text*/}
+            <div>
+                <p>Major text used in {branch.branch_name}</p>
+                <div>
+                    <ul>
+                        {
+                            books.map((text) =>{
+                                return(
+                                    <li key={text.text_name}>
+                                        <p>{text.text_name}</p>
+                                    </li>
+                                );
+                            })
+                        }
+                    </ul>
+                </div>
             </div>
         </div>
     );
