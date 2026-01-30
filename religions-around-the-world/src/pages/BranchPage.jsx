@@ -32,6 +32,18 @@ function BranchPage(){
             .then(data => setBranch(data));
     }, [religionId, branchId]);
 
+    const [regions, setRegions] = useState([]);
+
+    useEffect(() => {
+        fetch(`http://localhost:8000/religions/${religionId}/branch/${branchId}/regions`)
+            .then(res => res.json())
+            .then(data => {
+                console.log("Regions from backend:", data);
+                setRegions(data);
+            })
+            .catch(err => console.log("Error fetching branches regions:", err));
+    }, [religionId, branchId]);
+
     //loading
     if (loading || !branch || !religion) {
         return <p>Loading...</p>;
@@ -46,6 +58,10 @@ function BranchPage(){
                 <p>{branch.branch_description}</p>
             </div>
             {/*for the map*/}
+            <div>
+                <ReligionMap highlightedCountries={regions} />
+                <p><em>Countries that practice {branch.branch_name} in the majority</em></p>
+            </div>
         </div>
     );
 }

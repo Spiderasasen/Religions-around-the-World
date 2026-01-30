@@ -160,7 +160,7 @@ def get_single_branch(religions_key: int, branch_key: int):
 
 #getting the branches regions
 @app.get("/religions/{religions_key}/branch/{branch_key}/regions")
-def getting_branch_region(religions_key: id, branch_key: id):
+def getting_branch_region(religions_key: int, branch_key: int):
     conn = get_connection()
     cursor = conn.cursor(dictionary=True)
 
